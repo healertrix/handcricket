@@ -16,19 +16,7 @@ req.onreadystatechange = () => {
 
   }
 };
-//Old sendup
-// function sendup(data) {
-// req.open("PUT", "https://api.jsonbin.io/b/5fe0d5ac47ed0861b36a3b9b", true);
-//          req.setRequestHeader("Content-Type", "application/json");
-//    req.setRequestHeader("secret-key", "$2b$10$6qGof9HF/bccFFGUOk4seO8ZsoQQjZ5tQM94PgQtcg8SE9cBL/70i");
 
-
-//             req.send(data);
-
-// }
-// old send up
-
-// New
 function sendup(data) {
   req.open("POST", "https://jsonbox.io/box_f9838d55091ff3da50b9", true);
   req.setRequestHeader("Content-Type", "application/json");
@@ -90,9 +78,6 @@ const runcalc = () => {
       });
    });
 
-  txt.addEventListener("keypress", (e) => {
-    
-  });
 
 };
 
@@ -112,7 +97,6 @@ const matchupdate = (playerchoice, compchoice) => {
    let luck = JSON.stringify(knewer);
    // let data = JSON.parse(knewer);
 
-   
    sendup(luck);
    //Sending over
    if (updatevalue == 3) {
