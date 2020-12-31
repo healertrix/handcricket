@@ -13,7 +13,7 @@ let req = new XMLHttpRequest();
 
 req.onreadystatechange = () => {
   if (req.readyState == XMLHttpRequest.DONE) {
-    console.log(req.responseText);
+
   }
 };
 //Old sendup
@@ -77,7 +77,6 @@ const runcalc = () => {
          else {
             const compchoice = Math.floor(Math.random() * 6) + 1;
             const playerchoice = option.textContent;
-            console.log(computerhand.classList);
             playerhand.src = `./assets/fist.svg`;
             computerhand.src = `./assets/fist.svg`;
             setTimeout(() => {
@@ -92,8 +91,7 @@ const runcalc = () => {
    });
 
   txt.addEventListener("keypress", (e) => {
-    console.log(String.fromCharCode(e.keyCode));
-    console.log("am i working");
+    
   });
 
 };
@@ -114,7 +112,7 @@ const matchupdate = (playerchoice, compchoice) => {
    let luck = JSON.stringify(knewer);
    // let data = JSON.parse(knewer);
 
-   console.log(luck);
+   
    sendup(luck);
    //Sending over
    if (updatevalue == 3) {
@@ -223,7 +221,7 @@ const matchupdate = (playerchoice, compchoice) => {
             let luck = JSON.stringify(knewer);
 
               let data = JSON.parse(luck);
-               console.log(luck);
+               
 
               sendup(luck);
             setTimeout(() => {
@@ -292,7 +290,6 @@ const matchupdate = (playerchoice, compchoice) => {
 
               let luck = JSON.stringify(knewer);
               let data = JSON.parse(luck);
-               console.log(luck);
               sendup(luck);
 
               setTimeout(() => {
